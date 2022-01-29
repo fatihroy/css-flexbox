@@ -1,0 +1,146 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+background-color: aliceblue;
+line-height: 1.65;    /* spy ada jarak antar baris  */
+padding-bottom: 1000px;
+}
+
+/* latihan 1 */
+.container-1{
+    width: 800px;
+    margin: 50px auto;
+    background-color: rgb(153, 245, 240);
+    padding: 20px;
+     box-sizing: border-box; /* supaya ketika diberi padding ukurannya gak berubah */
+display: flex;
+    }
+
+    /* atur urutan dan ukuran */
+.main{
+flex: 3;
+order: 2;
+   }
+
+.sidebar-1{
+    flex: 1;
+    order: 1;
+}
+
+.sidebar-2{
+    flex: 1;
+order: 3;
+}
+
+/* latihan 2 */
+.container-2{
+   max-width: 800px;    /*maks widthnya 800 spy responsive */
+    margin: 50px auto;
+  
+}
+
+.layanan{
+    padding: 20px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+.layanan.satu{
+    background-color: rgb(19, 214, 248);
+}
+.layanan.dua{
+    background-color: rgb(19, 211, 61);
+}
+.layanan.tiga{
+    background-color: rgb(185, 214, 16);
+}
+
+/* latihan 3 */
+.container-3{
+    width: 800px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.thumbnail{
+    width: 100%;
+}
+.thumbnail img{
+    width: 100%;
+}
+
+
+/* latihan 4 */
+.container-4{
+    width: 800px;
+    margin: 50px auto;
+display: flex;
+flex-wrap: wrap;
+}
+.card{
+border: 3px solid gray;
+border-radius: 15px;
+background-color: aquamarine;
+ overflow: hidden; /* spy ngumpet kotak kecil headernya  */
+ margin: 25px;
+ 
+}
+.card .header{
+   
+    height: 150px;
+    background-color: aqua;
+    
+}
+.card .content{
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+/* latihan 5 */
+.container-5{
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+}
+.container-5 .kotak{
+    width: 50px;
+    height: 50px;
+    border: 3px solid red;
+    margin: auto;
+    text-align: center;
+}
+.kotak span{
+    
+    margin: auto;
+}
+
+    /* responsive */
+    /* kalo lebarnya brp, mk pake css apa */
+@media( min-width:600px ){ /* kalo media nya 600 hingga keatas */
+.container-2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.layanan{
+    width: 30%;
+    
+}
+.thumbnail{
+    width: 50%;
+}
+.container-4{
+    flex-wrap: nowrap;
+}
+.card.big{
+   transform: scale(1.2);
+}
+}
+
